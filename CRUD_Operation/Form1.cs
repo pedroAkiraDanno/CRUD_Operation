@@ -74,11 +74,27 @@ namespace CRUD_Operation
             dataGridView1.DataSource = dt;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            string status = "";
+            if (radioButton1.Checked == true)
+            {
+                status = radioButton1.Text;
+            }
+            else
+            {
+                status = (radioButton2.Text);
+            }
 
 
+            SqlCommand com = new SqlCommand("exec dbo.SP_Product_Update '" + int.Parse(textBox1.Text) + "','" + textBox2.Text + "','" + comboBox1.Text + "','" + status + "','" + DateTime.Parse(dateTimePicker1.Text) + "'", con);
+            com.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Sucessfuly Update");
+            LoadAllRecords();
 
-
-
-
+        }
     }
 }
