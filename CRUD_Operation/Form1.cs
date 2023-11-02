@@ -96,5 +96,29 @@ namespace CRUD_Operation
             LoadAllRecords();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            
+            if (MessageBox.Show("Are you confirm to delete?", "Delete",MessageBoxButtons.YesNo ) == DialogResult.Yes) 
+            {
+
+                con.Open();
+                SqlCommand com = new SqlCommand("exec dbo.SP_Product_Delete '" + int.Parse(textBox1.Text) + "'", con);
+                com.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Sucessfuly Deleted");
+                LoadAllRecords();
+
+
+            }
+
+
+
+
+
+
+        }
     }
 }
