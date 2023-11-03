@@ -120,5 +120,16 @@ namespace CRUD_Operation
 
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            SqlCommand com = new SqlCommand("exec dbo.SP_Product_Search '"+int.Parse(textBox1.Text)+"' ", con);
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+        }
     }
 }
