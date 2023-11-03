@@ -131,5 +131,11 @@ namespace CRUD_Operation
             dataGridView1.DataSource = dt;
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoadAllRecords();
+
+        }
     }
 }
