@@ -19,6 +19,9 @@ namespace CRUD_Operation
         public Form1()
         {
             InitializeComponent();
+
+            // Centraliza o formulário na tela
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
