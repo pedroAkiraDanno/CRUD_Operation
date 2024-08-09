@@ -27,3 +27,14 @@
 
 
 
+
+
+
+
+
+reference:
+https://www.youtube.com/watch?v=k7IkIeww_U0
+
+Complete CRUD Operation In C# With SQL Stored Procedure | Insert Delete Update Search
+
+
