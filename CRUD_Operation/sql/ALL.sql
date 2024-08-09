@@ -5,7 +5,8 @@
 
 
 
-CREATE DATABASE CRUD_SP_DB
+CREATE DATABASE CRUD_SP_DB;
+GO 
 
 
 
@@ -19,7 +20,7 @@ ItemName nvarchar(50),
 Color nvarchar(50),
 Status nvarchar(50),
 ExpiryData datetime
-)
+);
 
 
 
@@ -38,7 +39,7 @@ begin
 insert into ProductInfo_Tab (ProductID,ItemName,Color,Status,ExpiryData) values
 (@ProductID,@ItemName,@Color,@Status,@ExpiryDate)
 end
-
+;
 
 
 
@@ -54,7 +55,7 @@ as
 begin
 SELECT * FROM ProductInfo_Tab
 end
-
+;
 
 
 
@@ -70,7 +71,7 @@ begin
 update  ProductInfo_Tab set 
 ItemName=@ItemName,Color=@Color,Status=@Status,ExpiryData=@ExpiryDate where ProductID=@ProductID
 end
-
+;
 
 
 
@@ -96,7 +97,7 @@ as
 begin
 delete ProductInfo_Tab where ProductID=@ProductID
 end
-
+;
 
 
 
@@ -109,7 +110,7 @@ as
 begin
 SELECT * FROM ProductInfo_Tab where ProductID=@ProductID
 end
-
+;
 
 
 
