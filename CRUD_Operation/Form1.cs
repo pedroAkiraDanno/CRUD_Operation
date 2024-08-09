@@ -39,7 +39,10 @@ namespace CRUD_Operation
 
         }
 
+        //string connectionString = "Data Source=NB-00760\\SQL2022;Initial Catalog=CRUD_SP_DB;Integrated Security=True";
+        //SqlConnection con = new SqlConnection(connectionString);
         SqlConnection con = new SqlConnection("Data Source=NB-00760\\SQL2022;Initial Catalog=CRUD_SP_DB;Integrated Security=True");
+
 
 
 
